@@ -1,0 +1,13 @@
+.custom-button,
+.custom-button2 {
+   background-color: #ffffff;
+   color: black;
+   border-radius: 2px;
+   transition: background-color 0.3s ease, color 0.2s ease 0.2s; /* delay de 0.2s só na cor */
+}
+
+.custom-button:hover,
+.custom-button2:hover {
+   background-color: #000000;
+   color: white;
+}
