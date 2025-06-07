@@ -11,7 +11,7 @@ navbar = dbc.Navbar(
                dbc.Row(
                   [
                      dbc.Col(dbc.NavbarBrand("ImobView", className="text-white ")),
-                     dbc.Col(html.Img(src=LOGO, height="30px", style={'margin-left': '-20px'})),
+                     dbc.Col(html.Img(src=LOGO, height="30px", style={'margin-left': '-10px'})),
                   ],
                   align="center",
                   className="g-0",
@@ -26,9 +26,11 @@ navbar = dbc.Navbar(
                   dbc.Col(
                         dbc.Nav(
                               [
-                                 dbc.NavItem(dbc.NavLink('Home', href='/', className='text-white')),
-                                 dbc.NavItem(dbc.NavLink('Página 1', href='/pagina1', className='text-white')),
-                                 dbc.NavItem(dbc.NavLink('Página 2', href='/pagina2', className='text-white')),
+                                 dbc.NavItem(dbc.NavLink("Home", href="/", id="nav-home")),
+                                 dbc.NavItem(dbc.NavLink("Gráficos", href="/graficos", id="nav-graficos")),
+                                 dbc.NavItem(dbc.NavLink("Tabelas", href="/tabelas", id="nav-tabelas")),
+                                 dbc.NavItem(dbc.NavLink("IA", href="/ia", id="nav-ia")),
+                                 dbc.NavItem(dbc.NavLink("Sobre", href="/sobre", id="nav-sobre")),
                               ],
                               className="justify-content-center",
                               navbar=True,
@@ -49,3 +51,23 @@ navbar = dbc.Navbar(
    expand="md",
    className="w-100",
 )
+
+@app.callback(
+   Output("nav-home", "className"),
+   Output("nav-graficos", "className"),
+   Output("nav-tabelas", "className"),
+   Output("nav-ia", "className"),
+   Output("nav-sobre", "className"),
+   Input("url", "pathname")
+)
+def update_active_class(pathname):
+   def nav_class(link_path):
+      return "text-black nav-link-custom bg-white rounded-1" if pathname == link_path else "nav-link-custom rounded-1"
+
+   return (
+      nav_class("/"),
+      nav_class("/graficos"),
+      nav_class("/tabelas"),
+      nav_class("/ia"),
+      nav_class("/sobre")
+   )

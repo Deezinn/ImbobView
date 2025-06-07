@@ -21,9 +21,5 @@ df = pd.DataFrame({
 tabela = dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
 
 home = dbc.Container(children=[
-   dbc.Row([
-         html.H2("Tabela de Exemplo"),
-         tabela
-   ], style={'width': '100vh', 'margin-top': '100px'})
-
+   tabela
 ], fluid=True, style={'display': 'flex', 'justify-content': 'center', 'align-items': 'center', 'text-align': 'center','height': '500px' ,'with': '100vh'})

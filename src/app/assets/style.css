@@ -9,5 +9,14 @@
 .custom-button:hover,
 .custom-button2:hover {
    background-color: #000000;
-   color: white;
+   color: rgb(255, 255, 255);
+}
+
+.nav-link-custom {
+  width: 120px;     /* largura fixa */
+  height: 40px;     /* altura fixa */
+  display: flex;    /* para centralizar texto */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

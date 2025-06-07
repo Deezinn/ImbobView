@@ -44,7 +44,7 @@ header = dbc.Container([
             ], className="d-grid gap-3 d-md-flex justify-content-md-center")
          ], className="mt-5 me-5")
       ], md=4,),
-   ],style={'margin-top': '40px', 'padding': '10px'}),
+   ],style={'padding': '10px'}),
 
    # Linha da linha horizontal centralizada
    dbc.Row([
@@ -58,7 +58,6 @@ header = dbc.Container([
             'width': '90%',
             'marginLeft': 'auto',
             'marginRight': 'auto',
-            'margin-top': '40px'
          })
       ])
    ]),
@@ -67,7 +66,7 @@ header = dbc.Container([
    dbc.Row([
       dbc.Col([
          dbc.Row([
-            html.H1('Dados recentes -', className='text-white', style={'margin-bottom':'30px', 'margin-top': '30px'}),
+            html.H1('Dados recentes -', className='text-white', style={'margin-bottom':'30px',}),
             dbc.Col([
                dbc.Row([
                   dbc.Col([
@@ -92,7 +91,7 @@ header = dbc.Container([
                                     html.H3('$', style={'color': 'white'})
                                  ])
                               ])
-                              ], className="d-md-flex justify-content-center mt-5"),
+                              ], className="d-md-flex justify-content-center text-center mt-5"),
                         ],
                         style={
                            "width": "24rem",  # Aumente aqui a largura do card
