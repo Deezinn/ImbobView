@@ -31,7 +31,7 @@ header = dbc.Container([
          style={
             'display': 'flex',
             'flexDirection': 'row',
-            'alignItems': 'center'
+            'alignItems': 'center',
          })
       ], md=8),
 
@@ -44,7 +44,7 @@ header = dbc.Container([
             ], className="d-grid gap-3 d-md-flex justify-content-md-center")
          ], className="mt-5 me-5")
       ], md=4,),
-   ]),
+   ],style={'margin-top': '40px', 'padding': '10px'}),
 
    # Linha da linha horizontal centralizada
    dbc.Row([
@@ -58,7 +58,7 @@ header = dbc.Container([
             'width': '90%',
             'marginLeft': 'auto',
             'marginRight': 'auto',
-
+            'margin-top': '40px'
          })
       ])
    ]),
@@ -67,7 +67,7 @@ header = dbc.Container([
    dbc.Row([
       dbc.Col([
          dbc.Row([
-            html.H1('Dados recentes -', className='text-white', style={'margin-bottom':'30px'}),
+            html.H1('Dados recentes -', className='text-white', style={'margin-bottom':'30px', 'margin-top': '30px'}),
             dbc.Col([
                dbc.Row([
                   dbc.Col([
@@ -201,7 +201,7 @@ header = dbc.Container([
                ])
             ])
          ])
-      ], className="d-md-flex justify-content-start", style={'marginLeft': '30px', 'margin-bottom': '30px'}),
+      ], className="d-md-flex justify-content-start", style={'marginLeft': '30px', 'margin-bottom': '30px', 'padding': '20px'}),
    ])
 
 ], fluid=True, style={'height': '100%', 'background-color': 'black', 'padding': '20px'})
