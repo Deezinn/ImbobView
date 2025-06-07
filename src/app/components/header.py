@@ -19,19 +19,20 @@ header = dbc.Container([
                html.Img(
                   id='Ia-image',
                   src='/assets/img/inteligencia-artificial.png',
-                  style={'margin': '40px', 'width': '80px'}
+                  style={'margin-left': '80px','margin-right': '10px', 'width': '80px'}
                )
             ]),
 
             html.Div([
                html.H3(id='title-bot', children='Olá, usuário!', className='text-white'),
-               html.H5(id='descrie-bot', children='Conheça nossa plataforma de dados sobre dados Imobiliários', className='text-white')
-            ])
+               html.H5(id='descrie-bot', children='Conheça nossa plataforma sobre dados Imobiliários', className='text-white')
+            ], style={'margin-left': '20px'})
          ],
          style={
             'display': 'flex',
             'flexDirection': 'row',
             'alignItems': 'center',
+            'margin-top': '40px'
          })
       ], md=8),
 
@@ -44,7 +45,7 @@ header = dbc.Container([
             ], className="d-grid gap-3 d-md-flex justify-content-md-center")
          ], className="mt-5 me-5")
       ], md=4,),
-   ],style={'padding': '10px'}),
+   ],style={'padding': '10px' ,'margin-right': '10px'}),
 
    # Linha da linha horizontal centralizada
    dbc.Row([
@@ -53,9 +54,9 @@ header = dbc.Container([
             'backgroundColor': 'white',
             'height': '3px',
             'border': 'none',
-            'marginTop': '20px',
+            'marginTop': '80px',
             'marginBottom': '20px',
-            'width': '90%',
+            'width': '86%',
             'marginLeft': 'auto',
             'marginRight': 'auto',
          })
@@ -201,6 +202,6 @@ header = dbc.Container([
             ])
          ])
       ], className="d-md-flex justify-content-start", style={'marginLeft': '30px', 'margin-bottom': '30px', 'padding': '20px'}),
-   ])
+   ],style={'padding': '70px'})
 
 ], fluid=True, style={'height': '100%', 'background-color': 'black', 'padding': '20px'})
