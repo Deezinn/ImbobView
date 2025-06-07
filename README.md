@@ -20,7 +20,7 @@
 
 ## 📷 Prévia do Dashboard
 
-![Preview](src/app/assets/img/print_atual.png) 
+![Preview](src/app/assets/img/print_atual.png)
 
 ## 🛠️ Como Rodar Localmente
 
