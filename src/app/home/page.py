@@ -10,16 +10,7 @@ from components import nav
 
 from app import app
 
-# Dados fictícios para a tabela
-df = pd.DataFrame({
-   "Nome": ["Ana", "Bruno", "Carlos"],
-   "Idade": [25, 30, 22],
-   "Profissão": ["Engenheira", "Designer", "Desenvolvedor"]
-})
-
-# Criando as linhas da tabela
-tabela = dbc.Table.from_dataframe(df, striped=True, bordered=True, hover=True)
 
 home = dbc.Container(children=[
-   tabela
+   html.H1("Aqui esta vazio")
 ], fluid=True, style={'display': 'flex', 'justify-content': 'center', 'align-items': 'center', 'text-align': 'center','height': '500px' ,'with': '100vh'})

@@ -5,7 +5,7 @@ from components.header import header
 from dash import Input, Output, State, dcc, html
 # import pages
 from home.page import home
-
+from tabelas.page import tabela
 # import from folders
 from app import app
 
@@ -16,8 +16,9 @@ app.layout = dbc.Container(children=[
       header,
    ]),
    dbc.Row([
+         html.Img(src='assets/img/sinal-de-seta-para-baixo-para-navegar.png', style={'width': '50px','margin-top': '20px'}),
          dbc.Container(id="page-content", fluid=True, )
-   ])
+   ], style={'display': 'flex', 'justify-content': 'center'})
 ], fluid=True)
 
 
@@ -27,6 +28,8 @@ app.layout = dbc.Container(children=[
 def render_page_content(pathname):
    if pathname == '/home' or pathname == '/':
       return home
+   elif pathname == '/tabelas':
+      return tabela
    return dbc.Container([
          html.H1("404: Not found", className="text-danger"),
          html.Hr(),
@@ -34,10 +37,8 @@ def render_page_content(pathname):
          html.P("Use a NavBar para retornar ao sistema de maneira correta.")
       ])
 
-
-
 if __name__ == '__main__':
-   app.run(host='0.0.0.0', port='8051')
+   app.run(debug=True)
 
 
 #
