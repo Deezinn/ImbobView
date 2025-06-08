@@ -98,7 +98,8 @@ header = dbc.Container([
                            "width": "24rem",  # Aumente aqui a largura do card
                            "height": "250px",  # Aumente aqui a altura do card
                            "background-color": '#111111',
-                           'border-radius': '2px'
+                           'border-radius': '2px',
+                           'margin-top': '5px'
                         },
                      )
                   ]),
@@ -130,7 +131,8 @@ header = dbc.Container([
                            "width": "24rem",  # Aumente aqui a largura do card
                            "height": "250px",  # Aumente aqui a altura do card
                            "background-color": '#111111',
-                           'border-radius': '2px'
+                           'border-radius': '2px',
+                           'margin-top': '5px'
                         },
                      )
                   ]),
@@ -162,7 +164,8 @@ header = dbc.Container([
                            "width": "24rem",  # Aumente aqui a largura do card
                            "height": "250px",  # Aumente aqui a altura do card
                            "background-color": '#111111',
-                           'border-radius': '2px'
+                           'border-radius': '2px',
+                           'margin-top': '5px'
                         },
                      )
                   ]),
@@ -194,7 +197,8 @@ header = dbc.Container([
                            "width": "24rem",  # Aumente aqui a largura do card
                            "height": "250px",  # Aumente aqui a altura do card
                            "background-color": '#111111',
-                           'border-radius': '2px'
+                           'border-radius': '2px',
+                           'margin-top': '5px'
                         },
                      )
                   ]),
@@ -204,4 +208,4 @@ header = dbc.Container([
       ], className="d-md-flex justify-content-start", style={'marginLeft': '30px', 'margin-bottom': '30px', 'padding': '20px'}),
    ],style={'padding': '70px'})
 
-], fluid=True, style={'height': '100%', 'background-color': 'black', 'padding': '20px'})
+], fluid=True, style={'height': '100%','background': 'black', 'padding': '20px'})

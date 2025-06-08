@@ -32,11 +32,11 @@ navbar = dbc.Navbar(
                                  dbc.NavItem(dbc.NavLink("IA", href="/ia", id="nav-ia")),
                                  dbc.NavItem(dbc.NavLink("Sobre", href="/sobre", id="nav-sobre")),
                               ],
-                              className="justify-content-center",
+                              className="justify-content-center mt-2",
                               navbar=True,
                            ),
                            width="auto"
-                     )
+                     ),
                   ],
                   className="w-100 justify-content-center",
                ),
@@ -48,7 +48,7 @@ navbar = dbc.Navbar(
    ),
    color="black",
    dark=True,
-   expand="md",
+   expand="sm",
    className="w-100",
 )
 
@@ -71,3 +71,13 @@ def update_active_class(pathname):
       nav_class("/ia"),
       nav_class("/sobre")
    )
+
+@app.callback(
+   Output("navbar-collapse", "is_open"),
+   [Input("navbar-toggler", "n_clicks")],
+   [State("navbar-collapse", "is_open")],
+)
+def toggle_navbar_collapse(n, is_open):
+   if n:
+      return not is_open
+   return is_open

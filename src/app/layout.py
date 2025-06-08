@@ -16,8 +16,8 @@ app.layout = dbc.Container(children=[
       header,
    ]),
    dbc.Row([
-         html.Img(src='assets/img/sinal-de-seta-para-baixo-para-navegar.png', style={'width': '50px','margin-top': '20px'}),
-         dbc.Container(id="page-content", fluid=True, )
+         html.Img(src='assets/img/sinal-de-seta-para-baixo-para-navegar.png', style={'width': '50px','margin-top': '10px'}, className='bouncing-arrow'),
+         dbc.Container(id="page-content", fluid=True, style={'margin-top': '10px'})
    ], style={'display': 'flex', 'justify-content': 'center'})
 ], fluid=True)
 
