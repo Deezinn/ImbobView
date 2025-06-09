@@ -1,30 +1,34 @@
 # 🏡 ImbobView
 
-**ImbobView** é uma plataforma interativa construída com [Plotly Dash](https://dash.plotly.com/) que apresenta visualizações dinâmicas sobre os **preços de imóveis ao redor do Brasil**. O objetivo é facilitar a análise de mercado imobiliário por meio de um dashboard intuitivo, acessível e rico em dados.
+The **README** file is the main document that introduces and explains a project.  
+It typically includes the project’s purpose, features, and instructions on how to get started using it.
 
-## 📊 Tecnologias Utilizadas
+**ImbobView** is an interactive platform built with [Plotly Dash](https://dash.plotly.com/) that provides dynamic visualizations of **real estate prices across Brazil**. The goal is to simplify real estate market analysis through an intuitive, accessible, and data-rich dashboard.
+
+## 📊 Technologies Used
 
 - [Python 3.10+](https://www.python.org/)
 - [Plotly Dash](https://dash.plotly.com/)
 - [Pandas](https://pandas.pydata.org/)
 - [Docker](https://www.docker.com/)
 
-## 📌 Funcionalidades
+## 📌 Features
 
-- Visualização interativa de preços de imóveis por estado e cidade
-- Filtros por tipo de imóvel, faixa de preço e período
-- Mapa com distribuição geográfica dos imóveis
-- Gráficos de linha, barras e dispersão
-- Responsivo e acessível via navegador
-- Tabelas com dados atualizados
+- Interactive visualization of property prices by state and city  
+- Filters for property type, price range, and time period  
+- Map showing geographic distribution of properties  
+- Line, bar, and scatter plots  
+- Responsive and accessible via web browser  
+- Data tables with up-to-date information  
 
-## 📷 Prévia do Dashboard
+## 📷 Dashboard Preview
 
 ![Preview](src/app/assets/img/print_atual.png)
 
-## 🛠️ Como Rodar Localmente
+## 🛠️ How to Run Locally
 
-1. Clone o repositório:
+1. Clone the repository:
    ```bash
    git clone https://github.com/seu-usuario/imbobview.git
    cd imbobview
+   ```
