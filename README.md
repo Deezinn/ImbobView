@@ -63,6 +63,22 @@ Alternatively, you can run the application using **Docker**:
    ```bash
    docker run -p 8050:8050 imbobview
    ```
+## 🔌 API Reference
+
+The **API Reference** is a detailed list of all functions or endpoints provided by a software.  
+It explains what each one does and how to use them.
+
+ImbobView extracts and visualizes data from **SINAPI (National System of Costs Survey and Indexes of Civil Construction)**, a public dataset maintained by the Brazilian Institute of Geography and Statistics ([IBGE](https://www.ibge.gov.br/)).
+
+- **Source**: SINAPI provides monthly updates on construction material prices and labor costs across different Brazilian states and cities.
+- **Usage**: The application uses this dataset to generate dynamic visualizations of real estate-related price trends, allowing users to filter and explore the information geographically and temporally.
+
+Currently, data is extracted from public CSV files or APIs when available, and processed using Python scripts. This allows ImbobView to offer relevant insights into housing and construction costs across Brazil.
+
+> Note: Future updates may include direct integration with IBGE’s API for automatic data refresh.
+
+---
+
 
 Once running, open your browser and go to: [http://localhost:8050](http://localhost:8050)
 
