@@ -27,8 +27,43 @@ It typically includes the project’s purpose, features, and instructions on how
 
 ## 🛠️ How to Run Locally
 
+The **Installation Guide** shows users how to install and run the project on their own computer.  
+It explains all the steps and tools needed to get the dashboard up and running.
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/seu-usuario/imbobview.git
    cd imbobview
    ```
+
+2. (Optional but recommended) Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use: venv\Scripts\activate
+   ```
+
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Run the application:
+   ```bash
+   python app.py
+   ```
+
+Alternatively, you can run the application using **Docker**:
+
+1. Build the Docker image:
+   ```bash
+   docker build -t imbobview .
+   ```
+
+2. Run the Docker container:
+   ```bash
+   docker run -p 8050:8050 imbobview
+   ```
+
+Once running, open your browser and go to: [http://localhost:8050](http://localhost:8050)
+
+---
