@@ -6,7 +6,9 @@ from dash import Input, Output, State, dcc, html
 # import pages
 from home.page import home
 from tabelas.page import tabela
-
+from graficos.ipca import grafico_layout
+from graficos.sinapi import ipca_layout
+from sobre.page import about_page
 # import from folders
 from app import app
 
@@ -33,6 +35,12 @@ def render_page_content(pathname):
       return home
    elif pathname == '/tabelas':
       return tabela
+   elif pathname == '/ipca':
+      return grafico_layout
+   elif pathname == '/sinapi':
+      return ipca_layout
+   elif pathname == '/sobre':
+      return about_page
    return dbc.Container([
          html.H1("404: Not found", className="text-danger"),
          html.Hr(),

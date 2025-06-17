@@ -1,6 +1,6 @@
 import dash_bootstrap_components as dbc
 from dash import Input, Output, State, html
-from app import app  # Importa a instância do app
+from app import app  
 
 LOGO = "assets/img/mao.png"
 
@@ -27,9 +27,9 @@ navbar = dbc.Navbar(
                         dbc.Nav(
                               [
                                  dbc.NavItem(dbc.NavLink("Home", href="/", id="nav-home")),
-                                 dbc.NavItem(dbc.NavLink("Gráficos", href="/graficos", id="nav-graficos")),
+                                 dbc.NavItem(dbc.NavLink("IPCA", href="/ipca", id="nav-ipca")),
+                                 dbc.NavItem(dbc.NavLink("SINAPI", href="/sinapi", id="nav-sinapi")),
                                  dbc.NavItem(dbc.NavLink("Tabelas", href="/tabelas", id="nav-tabelas")),
-                                 dbc.NavItem(dbc.NavLink("IA", href="/ia", id="nav-ia")),
                                  dbc.NavItem(dbc.NavLink("Sobre", href="/sobre", id="nav-sobre")),
                               ],
                               className="justify-content-center mt-2",
@@ -54,9 +54,9 @@ navbar = dbc.Navbar(
 
 @app.callback(
    Output("nav-home", "className"),
-   Output("nav-graficos", "className"),
+   Output("nav-ipca", "className"),
    Output("nav-tabelas", "className"),
-   Output("nav-ia", "className"),
+   Output("nav-sinapi", "className"),
    Output("nav-sobre", "className"),
    Input("url", "pathname")
 )
@@ -66,9 +66,9 @@ def update_active_class(pathname):
 
    return (
       nav_class("/"),
-      nav_class("/graficos"),
+      nav_class("/ipca"),
       nav_class("/tabelas"),
-      nav_class("/ia"),
+      nav_class("/sinapi"),
       nav_class("/sobre")
    )
 
