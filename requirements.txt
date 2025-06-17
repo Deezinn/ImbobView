@@ -2,3 +2,5 @@ dash
 pandas
 dash_bootstrap_components
 dash_iconify
+psycopg2-binary
+python-dotenv
