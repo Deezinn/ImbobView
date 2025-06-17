@@ -6,6 +6,7 @@ from dash import Input, Output, State, dcc, html
 # import pages
 from home.page import home
 from tabelas.page import tabela
+
 # import from folders
 from app import app
 
@@ -17,7 +18,9 @@ app.layout = dbc.Container(children=[
    ]),
    dbc.Row([
          html.Img(src='assets/img/sinal-de-seta-para-baixo-para-navegar.png', style={'width': '50px','margin-top': '10px'}, className='bouncing-arrow'),
-         dbc.Container(id="page-content", fluid=True, style={'margin-top': '10px'})
+         dbc.Container(id="page-content", fluid=True, style={'margin-top': '10px'}),
+         html.Div('© 2025 Minha Empresa - Todos os direitos reservados.',style={'textAlign': 'center','padding': '10px','backgroundColor': '#f1f1f1','position': 'fixed','left': '0','bottom': '0','width': '100%','fontSize': '14px','color': '#555'}
+)
    ], style={'display': 'flex', 'justify-content': 'center'})
 ], fluid=True)
 
@@ -41,4 +44,5 @@ if __name__ == '__main__':
    app.run(debug=True)
 
 
+#
 #
