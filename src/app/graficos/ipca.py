@@ -10,6 +10,7 @@ from app import app
 
 ipca_df['periodo'] = pd.to_datetime(ipca_df['periodo'])
 ipca_df = ipca_df.sort_values('periodo')
+ipca_df['periodo'] = pd.to_datetime(ipca_df['periodo']).dt.tz_localize(None)
 
 grafico_layout = dbc.Container([
 
@@ -96,6 +97,7 @@ grafico_layout = dbc.Container([
    Input("btn-area", "n_clicks"),
 )
 def atualizar_graficos(start_date, end_date, n_linha, n_barra, n_area):
+
    df = ipca_df[(ipca_df['periodo'] >= pd.to_datetime(start_date)) & (ipca_df['periodo'] <= pd.to_datetime(end_date))].copy()
 
    ctx = dash.callback_context
