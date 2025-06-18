@@ -8,6 +8,7 @@ from app import app
 # Pré-processamento
 sinapi_df['periodo'] = pd.to_datetime(sinapi_df['periodo'])
 sinapi_df = sinapi_df.sort_values('periodo')
+sinapi_df['periodo'] = pd.to_datetime(sinapi_df['periodo']).dt.tz_localize(None)
 df = sinapi_df.copy()
 
 # Opções para filtros

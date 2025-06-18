@@ -9,6 +9,8 @@ from app import app
 
 PAGE_SIZE = 10
 
+sinapi_df['periodo'] = pd.to_datetime(sinapi_df['periodo']).dt.tz_localize(None)
+ipca_df['periodo'] = pd.to_datetime(ipca_df['periodo']).dt.tz_localize(None)
 tabela = dbc.Container([
 
    html.H1("Visualização de Dados Econômicos", className="text-center my-4 fw-bold"),
@@ -71,7 +73,7 @@ def atualizar_tabela(n_clicks_alternar, n_clicks_anterior, n_clicks_proximo, bot
         pagina_atual += 1
     elif trigger_id == "botao-alternar":
         pagina_atual = 1
-        
+
     start_idx = (pagina_atual - 1) * PAGE_SIZE
     end_idx = start_idx + PAGE_SIZE
     df_pagina = df.iloc[start_idx:end_idx]

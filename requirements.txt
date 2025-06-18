@@ -5,3 +5,4 @@ dash_iconify
 psycopg2-binary
 python-dotenv
 plotly-express
+SQLAlchemy
